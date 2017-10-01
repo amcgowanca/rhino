@@ -16,6 +16,8 @@ dependencies:
   - dblog
   - dynamic_page_cache
   - editor
+  - entity_browser
+  - entity_embed
   - entity_reference
   - file
   - help
