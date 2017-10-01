@@ -31,6 +31,10 @@
     }
   ],
   "extra": {
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
     "installer-paths": {
       "docroot/core": [
         "type:drupal-core"
