@@ -16,10 +16,14 @@ dependencies:
   - dblog
   - dynamic_page_cache
   - editor
+  - entity_reference
   - file
   - help
   - image
   - node
+  - media_entity
+  - media_entity_image
+  - media_entity_document
   - menu_link_content
   - menu_ui
   - options

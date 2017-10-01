@@ -10,7 +10,11 @@
     "grasmash/yaml-cli": "^1.0"
   },
   "require": {
-    "cweagans/composer-patches": "^1.5.0"
+    "cweagans/composer-patches": "^1.5.0",
+    "drupal/media_entity": "^1.6",
+    "drupal/media_entity_document": "^1.1",
+    "drupal/media_entity_image": "^1.2",
+    "traviscarden/behat-table-comparison": "^0.2.1"
   },
   "autoload": {
     "psr-4": {
