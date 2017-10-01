@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for Rhino installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function rhino_install() {
+  // Assign user 1 the "administrator" role.
+  $user = \Drupal\user\Entity\User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+
+  // Don't continue with installation if configuration is syncing...
+  if (\Drupal::isConfigSyncing()) {
+    return;
+  }
+
+  // Set the default themes and enable the admin theme.
+  \Drupal::configFactory()->getEditable('system.theme')
+    ->set('default', 'bartik')
+    ->set('admin', 'seven')
+    ->save(TRUE);
+  \Drupal::configFactory()->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
+}
